@@ -100,16 +100,37 @@ body {
 }
 
 /* Custom icons for platforms */
-.custom-icon {
+.icon-codechef,
+.icon-gfg, 
+.icon-leetcode,
+.icon-hackerrank,
+.icon-hackerearth {
+    display: inline-block;
     width: 20px;
     height: 20px;
-    object-fit: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.devicon-codechef-plain:before,
-.devicon-leetcode-plain:before,
-.devicon-hackerrank-plain:before {
-    font-size: 20px;
+.icon-codechef {
+    background-image: url('img/codechef.png');
+}
+
+.icon-gfg {
+    background-image: url('img/geeksforgeeks.png');
+}
+
+.icon-leetcode {
+    background-image: url('img/leetcode.png');
+}
+
+.icon-hackerrank {
+    background-image: url('img/hackerrank.png');
+}
+
+.icon-hackerearth {
+    background-image: url('img/hackerearth.png');
 }
 
 /* Intro Section */

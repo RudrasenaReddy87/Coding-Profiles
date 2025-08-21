@@ -1,5 +1,13 @@
-/* mail.css - Enhanced Animations Version */
-/* Font and Base Styles */
+/* 
+ Author: B Rudrasena Reddy
+ Gmail : b.rudrasenareddy@gmail.com
+
+ this is for my coding profiles page to showcase my coding journey
+ This CSS file styles the coding profiles page with a modern, clean design.
+ It also includes my github, linkedin, and resume links.Please Check once.
+ Connect with me on: LinkedIn, GitHub.
+
+*/
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f8fafc;
@@ -22,14 +30,23 @@ body {
   perspective: 1000px; /* For 3D effects */
 }
 
+
+.section-header {
+  display: flex;
+  flex-direction: column; /* stack title then buttons by default */
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
 .section-title {
   text-align: center;
   color: #1e293b;
-  margin-bottom: 3rem;
   font-size: 2.25rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .section-title::after {
@@ -44,14 +61,87 @@ body {
   border-radius: 2px;
 }
 
-/* Profile Grid Layout */
+/* Header Buttons:
+   On desktop they will be positioned to the right of the header (absolute),
+   on mobile they become static and centered under the title. */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Resume Button */
+.resume-btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #5453e6, #7b5cf6);
+}
+
+/* ICON BUTTONS (visible by default: black; white on hover with colored background) */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.25s ease, transform 0.18s ease;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+}
+
+/* icons: default black so they are visible on white background */
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter: brightness(0); /* black icon default */
+  transition: filter 0.2s ease;
+}
+
+/* GitHub hover: dark background and white icon */
+.github-btn:hover {
+  background: #24292e; /* GitHub dark */
+  transform: translateY(-3px);
+}
+.github-btn:hover img {
+  filter: brightness(0) invert(1); /* white icon */
+}
+
+/* LinkedIn hover: blue background and white icon */
+.linkedin-btn:hover {
+  background: #0a66c2; /* LinkedIn blue */
+  transform: translateY(-3px);
+}
+.linkedin-btn:hover img {
+  filter: brightness(0) invert(1); /* white icon */
+}
+
+/* PROFILE GRID LAYOUT */
 .profiles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Profile Card - Base Styles */
+/* Profile Card - Base Styles (restored original detailed styling) */
 .profile-card {
   position: relative;
   display: flex;
@@ -218,7 +308,29 @@ body {
 .hackerearth:hover { color: white; }
 
 /* Responsive Design */
+
+/* Desktop -> keep header-buttons absolute at right (already set). */
+/* Tablet / small screens: stack and center header-buttons below title */
+@media (max-width: 1024px) {
+  .profiles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  /* Move header buttons below the title and center them */
+  .header-buttons {
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
+    margin-top: 0.75rem;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
   .profiles-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
@@ -240,7 +352,7 @@ body {
   
   .section-title {
     font-size: 1.75rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
   }
   
   .profiles-grid {
@@ -258,5 +370,70 @@ body {
   
   .profile-link {
     font-size: 0.8rem;
+  }
+
+  /* header buttons are centered under title on small screens */
+  .header-buttons {
+    justify-content: center;
+    margin-top: 0.75rem;
+  }
+}
+
+
+/* add another styles modify */
+
+
+.resume-btn.view:hover {
+  box-shadow: 0 0 17px rgba(99,102,241,0.7), 0 0 24px rgba(139,92,246,0.5);
+}
+.section-title {
+  animation: fadeSlideDown 1s ease forwards;
+}
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(99,102,241,0.6));
+}
+.coding-profiles-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* stronger black shadow */
+  perspective: 1000px;
+}
+.profile-card {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.profile-card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.resume-btn {
+  animation: floatBtn 3s ease-in-out infinite;
+}
+@keyframes floatBtn {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@media (max-width: 480px) {
+  .profiles-grid {
+    grid-template-columns: 1fr;
   }
 }

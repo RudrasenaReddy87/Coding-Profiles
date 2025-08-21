@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7fd;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* Projects Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Project Card Initial + Reveal Animation */
+.project-card {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+}
+
+/* Reveal cards on scroll */
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay */
+.project-card:nth-child(1) { transition-delay: 0.1s; }
+.project-card:nth-child(2) { transition-delay: 0.2s; }
+.project-card:nth-child(3) { transition-delay: 0.3s; }
+.project-card:nth-child(4) { transition-delay: 0.4s; }
+.project-card:nth-child(5) { transition-delay: 0.5s; }
+.project-card:nth-child(6) { transition-delay: 0.6s; }
+.project-card:nth-child(7) { transition-delay: 0.7s; }
+.project-card:nth-child(8) { transition-delay: 0.8s; }
+
+/* Hover lift + shadow */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Content */
+.card-content {
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-content {
+    transform: scale(1.05);
+}
+
+.project-card h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Tech Stack Tags */
+.tech-tags {
+    margin: 1rem 0;
+}
+
+.tech-tags span {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 0.3rem 0.7rem;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Links Section */
+.card-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.card-links a:hover {
+    background: #fff;
+    color: #2575fc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .card-content {
+        padding: 1.5rem;
+    }
+}

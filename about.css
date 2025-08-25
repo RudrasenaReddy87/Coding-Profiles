@@ -158,12 +158,12 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 5px;
-    color: #2d3748;
+    color: #010815;
 }
 
 .tagline {
     font-size: 1.2rem;
-    color: #4a5568;
+    color: #010814;
     margin-bottom: 10px;
     font-weight: 500;
 }
@@ -177,7 +177,7 @@ h1 {
     align-items: center;
     gap: 10px;
     margin: 8px 0;
-    color: #5a6778;
+    color: #021631;
     word-break: break-all;
 }
 
@@ -195,7 +195,7 @@ h1 {
 .about-content p {
     margin: 15px 0;
     font-size: 1.05rem;
-    color: #4a5568;
+    color: #010834;
     line-height: 1.8;
 }
 
@@ -216,8 +216,8 @@ h1 {
 .skills-section h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #2d3748;
-    border-bottom: 2px solid #ff8c42;
+    color: #19212e;
+    border-bottom: 2px solid #943d07;
     padding-bottom: 5px;
     display: inline-block;
 }
@@ -244,7 +244,7 @@ h1 {
 }
 
 .skill-category h3 {
-    color: #ff8c42;
+    color: #e25502;
     margin-bottom: 10px;
     font-size: 1.1rem;
 }

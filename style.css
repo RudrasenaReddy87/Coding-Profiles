@@ -58,7 +58,7 @@ body {
   font-size: 2.25rem;
   font-weight: 700;
   position: relative;
-  background: linear-gradient(90deg, #5d5fbe, #4f07f8, #ec4899, #f59e0b);
+  background: linear-gradient(90deg, #e8772b, #b807f8, #e00946, #0a05f8);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -117,16 +117,16 @@ body {
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.306);
+  background: linear-gradient(135deg, #e10254, #1427f6);
   color: white;
   animation: floatBtn 3s ease-in-out infinite;
 }
 
 .resume-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 17px rgba(99,102,241,0.7), 0 0 24px rgba(139,92,246,0.5);
-  background: linear-gradient(135deg, #5453e6, #7b5cf6);
+  box-shadow: 0 0 17px rgba(241, 1, 49, 0.395), 0 0 24px rgba(20, 59, 252, 0.354);
+  background: linear-gradient(135deg, s#000c96, #ff04a3);
   animation: none; /* Stop animation on hover for better UX */
 }
 

@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rudrasena Reddy</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudrasena Reddy - Developer Profile</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-
-<!-- pop-up style here -->
-   <style>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -110,7 +105,7 @@
     }
 
     .popup-image:hover::after {
-      border-color: #5605e2;
+      border-color: #6a11cb;
       box-shadow: 0 0 15px rgba(106, 17, 203, 0.5);
     }
 
@@ -141,7 +136,7 @@
 
     .social-links a:hover {
       transform: translateY(-3px) rotate(5deg);
-      background: #9a2ccd;
+      background: #6a11cb;
       color: white;
     }
 
@@ -187,7 +182,7 @@
     }
 
     .popup-text .title {
-      color: #ff7700;
+      color: #6a11cb;
       font-weight: 600;
       margin-bottom: 15px;
       font-size: 18px;
@@ -209,12 +204,12 @@
     }
 
     .contact-item:hover {
-      color: #1500ff;
+      color: #6a11cb;
       transform: translateX(5px);
     }
 
     .contact-item i {
-      color: #000000;
+      color: #6a11cb;
       width: 20px;
       transition: all 0.3s ease;
     }
@@ -274,7 +269,7 @@
     .stat-item .number {
       font-size: 24px;
       font-weight: 700;
-      color: #ed4801;
+      color: #6a11cb;
       display: block;
       position: relative;
       z-index: 1;
@@ -282,7 +277,7 @@
 
     .stat-item .label {
       font-size: 14px;
-      color: #4e4b59;
+      color: #777;
       position: relative;
       z-index: 1;
     }
@@ -309,7 +304,7 @@
     }
 
     .skill-tag {
-      background: linear-gradient(135deg, #fc255e 0%, #6a11cb 100%);
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
       color: white;
       padding: 6px 15px;
       border-radius: 20px;
@@ -328,7 +323,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #025ee8 0%, #f058d9 100%);
+      background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
       opacity: 0;
       z-index: -1;
       transition: all 0.3s ease;
@@ -336,7 +331,7 @@
 
     .skill-tag:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(49, 22, 1, 0.797);
+      box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
     }
 
     .skill-tag:hover::before {
@@ -349,7 +344,7 @@
       padding: 20px;
       background: #f9f9ff;
       border-radius: 12px;
-      border-left: 4px solid #d87cf0;
+      border-left: 4px solid #6a11cb;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -362,7 +357,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(5, 67, 160, 0.094), transparent);
+      background: linear-gradient(90deg, transparent, rgba(106, 17, 203, 0.05), transparent);
       transition: all 0.6s ease;
     }
 
@@ -401,13 +396,13 @@
     }
 
     .project-item h4 {
-      color: #af5cdf;
+      color: #6a11cb;
       margin-bottom: 8px;
       transition: all 0.3s ease;
     }
 
     .project-item:hover h4 {
-      color: #257bfc;
+      color: #2575fc;
     }
 
     .project-item p {
@@ -420,7 +415,7 @@
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background: linear-gradient(135deg, #a762f2 0%, #2575fc 100%);
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
       color: white;
       text-decoration: none;
       border-radius: 30px;
@@ -439,7 +434,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #fc255e 0%, #6a11cb 100%);
+      background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
       opacity: 0;
       z-index: -1;
       transition: all 0.3s ease;
@@ -480,14 +475,14 @@
     }
 
     .close-btn:hover {
-      background: #de0b51;
+      background: #ff4757;
       color: white;
       transform: rotate(90deg) scale(1.1);
     }
 
     /* Add red highlight for close button */
     .close-btn.highlight {
-      background: #d60000eb !important;
+      background: #ed0518 !important;
       color: white !important;
       animation: pulse-red 0.5s infinite alternate;
     }
@@ -509,9 +504,9 @@
       transform: translateY(-50%);
       background: #333;
       color: white;
-      padding: 4px 6px;
+      padding: 8px 12px;
       border-radius: 6px;
-      font-size: 10px;
+      font-size: 12px;
       white-space: nowrap;
       opacity: 0;
       visibility: hidden;
@@ -584,12 +579,12 @@
     }
 
     .popup-text::-webkit-scrollbar-thumb {
-      background: linear-gradient(to bottom, #e614d8, #031cfb);
+      background: linear-gradient(to bottom, #6a11cb, #2575fc);
       border-radius: 4px;
     }
 
     .popup-text::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(to bottom, #fe8801, #1bb735);
+      background: linear-gradient(to bottom, #550ea8, #1c60d3);
     }
 
     /* Dark mode toggle */
@@ -611,16 +606,16 @@
     }
 
     .dark-mode-toggle:hover {
-      transform: rotate(360deg);
+      transform: rotate(30deg);
     }
 
     /* Dark mode styles */
     body.dark-mode {
       background: transparent !important; /* Keep transparent in dark mode */
     }
-   
+
     .dark-mode .popup-content {
-      background: #2d3942;
+      background: #2c3e50;
     }
 
     .dark-mode .popup-text h2 {
@@ -628,7 +623,7 @@
     }
 
     .dark-mode .popup-text .title {
-      color: #f97e03;
+      color: #8c68bb;
     }
 
     .dark-mode .contact-item {
@@ -640,7 +635,7 @@
     }
 
     .dark-mode .stat-item {
-      background: #c2defa8f;
+      background: #34495e;
     }
 
     .dark-mode .stat-item .label {
@@ -649,25 +644,25 @@
 
     .dark-mode .close-btn,
     .dark-mode .dark-mode-toggle {
-      background: #000000;
+      background: #34495e;
       color: #fff;
     }
 
     .dark-mode .countdown-tooltip {
-      background: #555454;
+      background: #1a1a1a;
     }
 
     .dark-mode .countdown-tooltip::after {
-      border-color: transparent transparent transparent #343333; /* Arrow for dark mode */
+      border-color: transparent transparent transparent #1a1a1a; /* Arrow for dark mode */
     }
 
     .dark-mode .skill-tag {
-      background: linear-gradient(135deg, #f94ed1 0%, #3d7bd7 100%);
+      background: linear-gradient(135deg, #8c68bb 0%, #3d84d7 100%);
     }
 
     .dark-mode .projects {
-      background: #1e3039;
-      border-left: 4px solid #6c02b4;
+      background: #34495e;
+      border-left: 4px solid #8c68bb;
     }
 
     .dark-mode .projects h3 {
@@ -675,7 +670,7 @@
     }
 
     .dark-mode .project-item h4 {
-      color: #9e88f8;
+      color: #8c68bb;
     }
 
     .dark-mode .project-item p {
@@ -787,10 +782,9 @@
       }
     }
   </style>
+</head>
 <body>
 
-  <!-- Start of pop-up code -->
-   
   <!-- Popup -->
   <div class="popup" id="popup">
     <div class="popup-content">
@@ -807,14 +801,14 @@
 
       <!-- Image left (smaller version) -->
       <div class="popup-image">
-        <img src="profile.jpg" alt="Rudrasena Reddy">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Rudrasena Reddy">
         
         <!-- Social links -->
         <div class="social-links">
-          <a href="https://github.com/RudrasenaReddy87" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/bodireddyrudrasenareddy/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/rudrasenareddy_87/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/Rudrasenareddy87/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-codepen"></i></a>
         </div>
       </div>
 
@@ -850,11 +844,11 @@
             <span class="label">HackerRank</span>
           </div>
           <div class="stat-item">
-            <span class="number">1500+</span>
-            <span class="label">Coding Problems</span>
+            <span class="number">500+</span>
+            <span class="label">DSA Problems</span>
           </div>
           <div class="stat-item">
-            <span class="number">10+</span>
+            <span class="number">8+</span>
             <span class="label">Projects</span>
           </div>
         </div>
@@ -884,11 +878,11 @@
           <div class="skill-category">
             <h4>Problem Solving Profiles</h4>
             <div class="skill-tags">
-              <a href="https://leetcode.com/rudrasenareddy" target="_blank" class="skill-tag" style="text-decoration: none;">LeetCode</a>
-              <a href="https://www.geeksforgeeks.org/user/brudrasenareddy" target="_blank" class="skill-tag" style="text-decoration: none;">GeeksforGeeks</a>
-              <a href="https://www.codechef.com/users/rudrasenareddy" target="_blank" class="skill-tag" style="text-decoration: none;">CodeChef</a>
-              <a href="https://www.hackerrank.com/rudrasenareddy" target="_blank" class="skill-tag" style="text-decoration: none;">HackerRank</a>
-              <a href="https://www.hackerearth.com/@rudrasenareddy" target="_blank" class="skill-tag" style="text-decoration: none;">HackerEarth</a>
+              <a href="https://leetcode.com/yourusername" target="_blank" class="skill-tag" style="text-decoration: none;">LeetCode</a>
+              <a href="https://www.geeksforgeeks.org/user/yourusername" target="_blank" class="skill-tag" style="text-decoration: none;">GeeksforGeeks</a>
+              <a href="https://www.codechef.com/users/yourusername" target="_blank" class="skill-tag" style="text-decoration: none;">CodeChef</a>
+              <a href="https://www.hackerrank.com/yourusername" target="_blank" class="skill-tag" style="text-decoration: none;">HackerRank</a>
+              <a href="https://www.hackerearth.com/@yourusername" target="_blank" class="skill-tag" style="text-decoration: none;">HackerEarth</a>
             </div>
           </div>
         </div>
@@ -898,21 +892,21 @@
           <h3><i class="fas fa-code"></i> Projects</h3>
           
           <div class="project-item">
-            <h4>WhatsApp Clone</h4>
-            <p>A full-stack WhatsApp Web clone built with React and Node.js, featuring real-time messaging, secure authentication, and a modern responsive UI. Powered by Socket.IO, MongoDB, and JWT, it ensures fast communication and data protection. Deployed on Render for scalability and seamless access across devices.</p>
+            <h4>Weather Forecast App</h4>
+            <p>A responsive web application that provides real-time weather data and forecasts using API integration.</p>
           </div>
           
           <div class="project-item">
-            <h4>CSS Button Generator</h4>
-            <p>CSS Button Generator is a responsive React + Vite + Tailwind CSS app showcasing a collection of modern, animated buttons. It offers live previews, reusable components, and copy-to-clipboard functionality for developers and designers. Optimized for desktop and mobile, it’s a ready-to-use inspiration hub for button styles.</p>
+            <h4>Task Management System</h4>
+            <p>A full-stack application for managing tasks with user authentication and CRUD functionality.</p>
           </div>
           
           <div class="project-item">
-            <h4>Weather Forecasting App</h4>
-            <p>A responsive and interactive Weather Forecasting Web App built using HTML, CSS, JavaScript, and Node.js. It provides real-time weather data using the OpenWeatherMap API, includes unit toggling, AQI info, and dynamic UI features. Hosted on Vercel (frontend) and Render (backend) with full mobile and desktop support.</p>
+            <h4>E-commerce Product Page</h4>
+            <p>An interactive frontend implementation of an e-commerce product page with cart functionality.</p>
           </div>
           
-          <a href="https://github.com/rudrasenareddy87" class="github-link" target="_blank">
+          <a href="https://github.com/yourusername" class="github-link" target="_blank">
             <i class="fab fa-github"></i> Visit GitHub for More Projects
           </a>
         </div>
@@ -1024,86 +1018,7 @@
       }
     });
   </script>
-  <!-- End Of pop-up code -->
-  <div class="coding-profiles-container">
-    
-    <!-- Updated Header Section -->
-    <header class="section-header">
-      <h2 class="section-title">My Coding Journey</h2>
-
-      <div class="navigation-container">
-        <nav class="navigation-menu">
-          <a href="about.html" class="nav-link">About Me</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-        </nav>
-        
-        <div class="header-buttons">
-          <a href="resume.pdf" class="resume-btn view" target="_blank" rel="noopener noreferrer" aria-label="View resume">
-            View Resume
-          </a>
-
-          <div class="social-icons">
-            <a href="https://github.com/RudrasenaReddy87" class="icon-btn github-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/in/bodireddyrudrasenareddy/" class="icon-btn linkedin-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <a href="https://www.instagram.com/rudrasenareddy_87" class="icon-btn instagram-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Profiles Grid -->
-    <div class="profiles-grid">
-      <!-- Gmail (opens in mail app) -->
-      <a href="mailto:b.rudrasenareddy@gmail.com" class="profile-card email">
-        <span class="profile-name">Here My Mail</span>
-        <span class="profile-link">b.rudrasenareddy@gmail.com</span>
-        <div class="hover-effect"></div>
-      </a>
-
-      <!-- CodeChef -->
-      <a href="https://www.codechef.com/users/rudrasenareddy" class="profile-card codechef" target="_blank" rel="noopener noreferrer">
-        <span class="profile-name">CodeChef</span>
-        <span class="profile-link">codechef.com/users/rudrasenareddy</span>
-        <div class="hover-effect"></div>
-      </a>
-
-      <!-- GeeksforGeeks -->
-      <a href="https://www.geeksforgeeks.org/user/brudrasenareddy/" class="profile-card geeksforgeeks" target="_blank" rel="noopener noreferrer">
-        <span class="profile-name">GeeksforGeeks</span>
-        <span class="profile-link">geeksforgeeks.org/user/brudrasenareddy</span>
-        <div class="hover-effect"></div>
-      </a>
-
-      <!-- LeetCode -->
-      <a href="https://leetcode.com/u/rudrasenareddy/" class="profile-card leetcode" target="_blank" rel="noopener noreferrer">
-        <span class="profile-name">LeetCode</span>
-        <span class="profile-link">leetcode.com/u/rudrasenareddy</span>
-        <div class="hover-effect"></div>
-      </a>
-
-      <!-- HackerRank -->
-      <a href="https://www.hackerrank.com/profile/RudraSenaReddy" class="profile-card hackerrank" target="_blank" rel="noopener noreferrer">
-        <span class="profile-name">HackerRank</span>
-        <span class="profile-link">hackerrank.com/profile/RudraSenaReddy</span>
-        <div class="hover-effect"></div>
-      </a>
-
-      <!-- HackerEarth -->
-      <a href="https://www.hackerearth.com/@Rudrasenareddy" class="profile-card hackerearth" target="_blank" rel="noopener noreferrer">
-        <span class="profile-name">HackerEarth</span>
-        <span class="profile-link">hackerearth.com/@Rudrasenareddy</span>
-        <div class="hover-effect"></div>
-      </a>
-    </div>
-
-  </div>
 </body>
+
+
 </html>

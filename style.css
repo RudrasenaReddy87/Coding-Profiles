@@ -118,7 +118,7 @@ body {
   font-size: 0.95rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.306);
-  background: linear-gradient(135deg, #e10254, #1427f6);
+  background: linear-gradient(135deg, #ff003c, #1427f6);
   color: white;
   animation: floatBtn 3s ease-in-out infinite;
 }
@@ -126,7 +126,7 @@ body {
 .resume-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 17px rgba(241, 1, 49, 0.395), 0 0 24px rgba(20, 59, 252, 0.354);
-  background: linear-gradient(135deg, s#000c96, #ff04a3);
+  background: linear-gradient(135deg, s#000c96, #ff0454);
   animation: none; /* Stop animation on hover for better UX */
 }
 

@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "title": "Student Activity Monitoring AI",
+      "description": "AI-based system to monitor student activities and engagement in real-time using computer vision and machine learning algorithms.",
+      "techStack": ["Python", "OpenCV", "TensorFlow", "Flask"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/Student-Activity-Monitoring-Ai",
+      "demoUrl": "",
+      "lastUpdated": "2023-10-15",
+      "created": "2023-08-01"
+    },
+    {
+      "title": "LinkedIn Automation Tool",
+      "description": "Automates LinkedIn interactions like connections, messages, and endorsements with smart rate limiting to avoid account restrictions.",
+      "techStack": ["Python", "Selenium", "Web Automation", "REST API"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/Linkedin-Automation",
+      "demoUrl": "",
+      "lastUpdated": "2023-09-20",
+      "created": "2023-07-10"
+    },
+    {
+      "title": "CSS Button Generator",
+      "description": "Generates custom CSS buttons with different styles, gradients, and hover effects with real-time preview and code export.",
+      "techStack": ["HTML", "CSS", "JavaScript", "UI/UX Design"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/CSS-Button-Generator",
+      "demoUrl": "https://rudrasenareddy87.github.io/CSS-Button-Generator/",
+      "lastUpdated": "2023-11-05",
+      "created": "2023-09-15"
+    },
+    {
+      "title": "Weather Forecasting App",
+      "description": "Displays real-time weather data and forecasts using a responsive, interactive UI with location detection and severe weather alerts.",
+      "techStack": ["React", "Weather API", "CSS", "Geolocation"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/Weather-forecasting-app",
+      "demoUrl": "https://rudrasenareddy87.github.io/Weather-forecasting-app/",
+      "lastUpdated": "2023-10-25",
+      "created": "2023-08-12"
+    },
+    {
+      "title": "Chrome Custom Home Page",
+      "description": "Personalized home page with quick links, widgets, and beautiful UI elements that replaces the default Chrome new tab page.",
+      "techStack": ["HTML", "CSS", "JavaScript", "Chrome Extensions"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/chrome-custom-home-page",
+      "demoUrl": "https://rudrasenareddy87.github.io/chrome-custom-home-page/",
+      "lastUpdated": "2023-09-05",
+      "created": "2023-06-20"
+    },
+    {
+      "title": "WhatsApp Clone",
+      "description": "Real-time chat application built with modern web technologies mimicking WhatsApp with message encryption and media sharing.",
+      "techStack": ["React", "Firebase", "CSS", "Real-time Database"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/whatsapp-clone",
+      "demoUrl": "https://rudrasenareddy87.github.io/whatsapp-clone/",
+      "lastUpdated": "2023-11-12",
+      "created": "2023-10-01"
+    }
+  ]
+}

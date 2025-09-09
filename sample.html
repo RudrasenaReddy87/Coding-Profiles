@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bodireddy Rudrasena Reddy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #4a6fc7;
+            --primary-dark: #3b5aa6;
+            --secondary: #6a11cb;
+            --accent: #2575fc;
+            --text: #2c3e50;
+            --text-light: #7f8c8d;
+            --background: #ffffff;
+            --background-alt: #f5f7fa;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: var(--background);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            animation: slideUp 0.8s ease-out 0.2s both;
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 0.9; transform: translateY(0); }
+        }
+
+        .header-content p::after {
+            content: '|';
+            position: absolute;
+            right: -8px;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .animated-circle {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pulse 8s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.2); opacity: 0.15; }
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .profile-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px 30px;
+            background: var(--background-alt);
+            position: relative;
+        }
+
+        .profile-card {
+            background: var(--background);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
+            cursor: pointer;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .profile-card:hover .profile-img img {
+            transform: scale(1.05);
+        }
+
+        .profile-overlay {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), transparent, var(--primary));
+            opacity: 0.3;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .profile-hover-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(74, 111, 199, 0.95);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            color: white;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .profile-hover-info h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .profile-hover-info p {
+            font-size: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .profile-img-container:hover .profile-hover-info {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .profile-card h2 {
+            color: var(--text);
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        .profile-card p {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            background: var(--background);
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 111, 199, 0.1), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .link-item:hover::before {
+            left: 100%;
+        }
+
+        .link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .link-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .link-item:hover .link-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .link-text {
+            font-weight: 500;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .link-arrow {
+            color: var(--primary);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover .link-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px 30px;
+        }
+
+        .contact-section h2 {
+            color: var(--text);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: var(--background);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 111, 199, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Dynamic outline color based on input length */
+        #name:not(:placeholder-shown) {
+            border-color: #4a6fc7;
+        }
+
+        #email:not(:placeholder-shown):valid {
+            border-color: #10b981;
+        }
+
+        #email:not(:placeholder-shown):invalid {
+            border-color: #ef4444;
+        }
+
+        #subject:not(:placeholder-shown) {
+            border-color: #6a11cb;
+        }
+
+        #message:not(:placeholder-shown) {
+            border-color: #2575fc;
+        }
+
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            padding: 16px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            width: 100%;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(74, 111, 199, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(74, 111, 199, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(74, 111, 199, 0.3);
+        }
+
+        .btn:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-shine {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            transition: all 0.7s ease;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .btn:hover .btn-shine {
+            opacity: 1;
+            animation: shine 1.5s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            z-index: -2;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn-loader {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .loader-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 3px;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        .loader-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loader-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .btn.sending .btn-text {
+            opacity: 0;
+        }
+
+        .btn.sending .btn-loader {
+            display: flex;
+        }
+
+        .notification {
+            padding: 16px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        .limit-reached {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+
+        .limit-reached h3 {
+            margin-bottom: 15px;
+            color: #92400e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .limit-reached p {
+            margin-bottom: 20px;
+        }
+
+        .gmail-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #DB4437;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(219, 68, 55, 0.3);
+        }
+
+        .gmail-btn:hover {
+            background: #c13a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(219, 68, 55, 0.4);
+        }
+
+        footer {
+            background: var(--text);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .profile-card, .contact-section {
+                padding: 25px 20px;
+            }
+            
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Bodireddy Rudrasena Reddy</h1>
+                <p>Software Developer & Competitive Programmer | Seeking Opportunities</p>
+                <div class="animated-circle"></div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-img-container">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bodireddy Rudrasena Reddy">
+                        </div>
+                        <div class="profile-overlay">
+                            <div class="wave"></div>
+                        </div>
+                        <div class="profile-hover-info">
+                            <h3>About Me</h3>
+                            <p>Recent graduate passionate about software development and competitive programming. Seeking opportunities to apply my skills and grow professionally.</p>
+                        </div>
+                    </div>
+                    <h2>Contact Information</h2>
+                    <p>Reach out for collaborations or opportunities. I'm actively looking for software development roles!</p>
+                    
+                    <div class="links">
+                        <a href="https://github.com/RudrasenaReddy87" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="link-text">GitHub</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/bodireddyrudrasenareddy/" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="link-text">LinkedIn</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://rudrasenareddy87.github.io/Coding-Profiles/" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="link-text">Portfolio</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.geeksforgeeks.org/user/brudrasenareddy/" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fab fa-gg-circle"></i>
+                            </div>
+                            <div class="link-text">GeeksForGeeks</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://leetcode.com/u/rudrasenareddy/" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="link-text">LeetCode</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.codechef.com/users/rudrasenareddy" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="link-text">CodeChef</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.hackerrank.com/profile/RudraSenaReddy" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fab fa-hackerrank"></i>
+                            </div>
+                            <div class="link-text">HackerRank</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.hackerearth.com/@Rudrasenareddy/" class="link-item" target="_blank">
+                            <div class="link-icon">
+                                <i class="fab fa-dev"></i>
+                            </div>
+                            <div class="link-text">HackerEarth</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:b.rudrasenareddy@gmail.com" class="link-item">
+                            <div class="link-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="link-text">Gmail</div>
+                            <div class="link-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>Get In Touch</h2>
+                <form id="contactForm" action="https://formspree.io/f/mandljpd" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <div class="btn-shine"></div>
+                        <div class="btn-loader">
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                        </div>
+                    </button>
+                    
+                    <div id="notification" class="notification"></div>
+                </form>
+                
+                <div id="limitReached" class="limit-reached">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Form Submission Limit Reached</h3>
+                    <p>I've reached my monthly form submission limit. Please contact me directly via email or use one of the platforms below.</p>
+                    <a href="mailto:b.rudrasenareddy@gmail.com" class="gmail-btn">
+                        <i class="fas fa-envelope"></i> Send via Gmail
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Bodireddy Rudrasena Reddy. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Check if we've hit the Formspree limit (simulated with localStorage for demo)
+        // In a real scenario, you would detect this from Formspree's response
+        function checkSubmissionLimit() {
+            // For demo purposes, we'll use a flag in localStorage to simulate reaching the limit
+            // Remove this line in production - the limit should be detected from Formspree's response
+            localStorage.setItem('formspreeLimitReached', 'false');
+            
+            const limitReached = localStorage.getItem('formspreeLimitReached') === 'true';
+            if (limitReached) {
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('limitReached').style.display = 'block';
+            }
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const notification = document.getElementById('notification');
+            const form = this;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                showNotification('Please fill in all fields.', 'error');
+                return;
+            }
+            
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            setButtonState(true);
+            showNotification('Sending your message...', '');
+            
+            // Create a FormData object from the form
+            const formData = new FormData(form);
+            
+            // Submit the form using fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('<strong>Thank you!</strong> Your message has been sent successfully. I will get back to you soon.', 'success');
+                    form.reset();
+                } else if (response.status === 429) {
+                    // Formspree returns 429 when rate limit is exceeded
+                    throw new Error('LIMIT_REACHED');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                if (error.message === 'LIMIT_REACHED') {
+                    // Show the limit reached message and hide the form
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('limitReached').style.display = 'block';
+                    
+                    // Store in localStorage that we've hit the limit
+                    localStorage.setItem('formspreeLimitReached', 'true');
+                } else {
+                    showNotification('<strong>Error:</strong> Failed to send message. Please try again later or contact me directly at b.rudrasenareddy@gmail.com.', 'error');
+                    console.error('Form submission error:', error);
+                }
+            })
+            .finally(() => {
+                setButtonState(false);
+            });
+        });
+
+        // Helper function to show notifications
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            notification.innerHTML = message;
+            notification.className = 'notification';
+            notification.style.display = 'block';
+            
+            if (type) {
+                notification.classList.add(type);
+            }
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        // Helper function to set button state
+        function setButtonState(isLoading) {
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (isLoading) {
+                submitBtn.disabled = true;
+                submitBtn.classList.add('sending');
+            } else {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('sending');
+            }
+        }
+
+        // Enhanced input field interactions
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', function() {
+                // Add a class when the user starts typing
+                if (this.value.length > 0) {
+                    this.classList.add('has-value');
+                } else {
+                    this.classList.remove('has-value');
+                }
+                
+                // Dynamic outline color based on character count
+                const length = this.value.length;
+                if (length > 0) {
+                    const hue = Math.min(220 + length * 2, 270); // Gradually shift color
+                    this.style.borderColor = `hsl(${hue}, 70%, 50%)`;
+                } else {
+                    this.style.borderColor = '#e2e8f0';
+                }
+            });
+            
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+                this.style.boxShadow = '0 0 0 3px rgba(74, 111, 199, 0.2)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('focused');
+                if (!this.value) {
+                    this.style.borderColor = '#e2e8f0';
+                }
+                this.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.05)';
+            });
+        });
+
+        // Enhanced button animation
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('sending')) {
+                this.style.transform = 'translateY(-3px) scale(1.02)';
+            }
+        });
+
+        submitBtn.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('sending')) {
+                this.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+
+        // Update the header text based on job search status
+        document.addEventListener('DOMContentLoaded', function() {
+            checkSubmissionLimit();
+            
+            // Add staggered animation to link items
+            document.querySelectorAll('.link-item').forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.classList.add('fade-in');
+            });
+            
+            // You can modify this text based on your job search status
+            const jobStatus = "Seeking Software Development Opportunities";
+            const headerSubtitle = document.querySelector('.header-content p');
+            
+            // Animate the text change
+            let charIndex = 0;
+            const originalText = headerSubtitle.textContent;
+            const newText = `${originalText} | ${jobStatus}`;
+            
+            headerSubtitle.textContent = "";
+            
+            function typeWriter() {
+                if (charIndex < newText.length) {
+                    headerSubtitle.textContent += newText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            typeWriter();
+        });
+    </script>
+</body>
+</html>

@@ -7,6 +7,87 @@
     <link rel="stylesheet" href="about.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      /* Subtle Cursor Particles */
+      .cursor-particle {
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        border-radius: 50%;
+        animation: particleFade 1.5s ease-out forwards;
+        opacity: 0.7;
+      }
+
+      .cursor-bubble {
+        width: 6px;
+        height: 6px;
+        background: radial-gradient(circle, rgba(106, 17, 203, 0.4) 0%, rgba(37, 117, 252, 0.2) 100%);
+        box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+      }
+
+      .cursor-sparkle {
+        width: 3px;
+        height: 3px;
+        background: rgba(252, 37, 94, 0.6);
+        box-shadow: 0 0 4px rgba(252, 37, 94, 0.4);
+      }
+
+      .cursor-dot {
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 119, 198, 0.5);
+      }
+
+      @keyframes particleFade {
+        0% {
+          opacity: 0.7;
+          transform: scale(0.8) translate(0, 0);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.2) translate(5px, -5px);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.3) translate(10px, -10px);
+        }
+      }
+
+      /* Professional Cursor Styles */
+      body {
+        cursor:default;
+      }
+
+      /* Interactive elements get pointer cursor */
+      button,
+      a,
+      .close-btn,
+      .dark-mode-toggle,
+      .profile-card,
+      .nav-link,
+      .icon-btn,
+      .resume-btn,
+      .skill-tag,
+      .github-link,
+      .social-links a {
+        cursor: pointer;
+      }
+
+      /* Text selection cursor */
+      input,
+      textarea,
+      .popup-text,
+      .contact-item,
+      .project-item p {
+        cursor: text;
+      }
+
+      /* Smooth cursor transitions */
+      * {
+        cursor: inherit;
+        transition: cursor 0.2s ease;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -46,7 +127,7 @@
         <div class="intro-section fade-in">
             <div class="intro-text">
                 <h1>Hi, Myself <span class="highlight">Rudrasena Reddy</span></h1>
-                <p class="tagline">Software Developer | Problem Solver</p>
+                <p class="tagline">Aspiring Full Stack Developer | Problem Solver</p>
                 
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> b.rudrasenareddy@gmail.com</p>
@@ -118,5 +199,66 @@
             </div>
         </div>
     </div>
+    <script>
+      // Interactive Cursor Particles
+      let mouseX = 0;
+      let mouseY = 0;
+      let isMoving = false;
+      let moveTimeout;
+      let particleCount = 0;
+      const maxParticles = 15;
+
+      // Track mouse movement
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        isMoving = true;
+
+        // Clear existing timeout
+        clearTimeout(moveTimeout);
+
+        // Create particles while moving
+        if (particleCount < maxParticles) {
+          createCursorParticle(mouseX, mouseY);
+        }
+
+        // Set timeout to stop creating particles when movement stops
+        moveTimeout = setTimeout(() => {
+          isMoving = false;
+          particleCount = 0;
+        }, 100);
+      });
+
+      // Function to create cursor particles
+      function createCursorParticle(x, y) {
+        const particleTypes = ['cursor-bubble', 'cursor-sparkle', 'cursor-dot'];
+        const randomType = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+
+        const particle = document.createElement('div');
+        particle.className = `cursor-particle ${randomType}`;
+
+        // Random offset from cursor position
+        const offsetX = (Math.random() - 0.5) * 40;
+        const offsetY = (Math.random() - 0.5) * 40;
+
+        particle.style.left = `${x + offsetX}px`;
+        particle.style.top = `${y + offsetY}px`;
+
+        // Random size variation
+        const scale = 0.5 + Math.random() * 0.5;
+        particle.style.transform = `scale(${scale})`;
+
+        document.body.appendChild(particle);
+        particleCount++;
+
+        // Remove particle after animation
+        setTimeout(() => {
+          if (particle.parentNode) {
+            particle.parentNode.removeChild(particle);
+            particleCount = Math.max(0, particleCount - 1);
+          }
+        }, 2000);
+      }
+    </script>
 </body>
 </html>

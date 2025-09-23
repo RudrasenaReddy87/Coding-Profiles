@@ -60,6 +60,16 @@ const embeddedProjectsData = {
       "lastUpdated": "2025-08-14",
       "created": "2025-08-11",
       "featured": true
+    },
+    {
+        "title": "CartLite E-Commerce WebSite",
+      "description": "CartLite - Modern frontend e-commerce platform built with React 18 and Tailwind CSS. Features advanced animations, responsive mobile-first design, and professional UI/UX. Includes product catalog, shopping cart simulation, category filtering, and interactive components",
+      "techStack": ["JavaScript", "CSS3", "HTML5","React 18", "Node.js", "Express.js", "Tailwind CSS", "React Router", "Git"],
+      "githubUrl": "https://github.com/RudrasenaReddy87/CartLite-E-Commerce-WebSite",
+      "demoUrl": "https://cartlite-ecommerce.netlify.app/",
+      "lastUpdated": "2025-09-23",
+      "created": "2025-09-21",
+      "featured": true
     }
   ]
 };

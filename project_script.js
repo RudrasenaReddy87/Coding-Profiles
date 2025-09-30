@@ -89,7 +89,7 @@ const embeddedProjectsData = {
     "bcrypt"
   ],
   "githubUrl": "https://github.com/RudrasenaReddy87/AI-Data-Agent",
-  "demoUrl": "",
+  "demoUrl": "https://ai-data-agent-vert.vercel.app/",
   "lastUpdated": "2025-09-29",
   "created": "2025-09-27",
   "featured": true

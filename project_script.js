@@ -70,7 +70,30 @@ const embeddedProjectsData = {
       "lastUpdated": "2025-09-23",
       "created": "2025-09-21",
       "featured": true
-    }
+    },
+{
+  "title": "AI Data Agent - Natural Language Excel Analysis",
+  "description": "AI Data Agent - A full-stack intelligent data analysis platform that lets users upload Excel files and query them in natural language. Built with React, FastAPI, and PostgreSQL, it integrates LangChain and OpenAI for AI-powered insights, dynamic charts, and conversational analysis. Features include user authentication, file processing with data cleaning, and session-based conversation history.",
+  "techStack": [
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "LangChain",
+    "OpenAI API",
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Axios",
+    "JWT",
+    "bcrypt"
+  ],
+  "githubUrl": "https://github.com/RudrasenaReddy87/AI-Data-Agent",
+  "demoUrl": "",
+  "lastUpdated": "2025-09-29",
+  "created": "2025-09-27",
+  "featured": true
+}
   ]
 };
 
